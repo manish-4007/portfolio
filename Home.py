@@ -5,7 +5,7 @@ from streamlit_extras.colored_header import colored_header
 from streamlit_extras.grid import grid
 from pages.Projects import show_featured_projects
 import webbrowser, time
-st.set_page_config(page_title='Digital CV',page_icon='random',layout='wide')
+st.set_page_config(page_icon='random',layout='wide')
 # st.set_page_config( )
 
 def write_profession(prof):

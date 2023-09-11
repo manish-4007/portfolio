@@ -1,5 +1,5 @@
 import streamlit as st 
-st.set_page_config(page_title="Digital CV|Manish Rai Chodhury",page_icon="random",layout='wide')
+# st.set_page_config(page_title="Digital CV|Manish Rai Chodhury",page_icon="random",layout='wide')
 import pandas as pd 
 import numpy as np 
 from streamlit_card import card
@@ -36,19 +36,26 @@ def project_card(project):
         color_name="blue-green-70",
     )   
     st.markdown(f"<div style='justify-content: center; width:500px; margin: 5px;'><p>{project['description']}</p>", unsafe_allow_html=True)
-    
     col1,col2,col3 = st.columns(3)
-    with col1:
-        if st.button("Source Code", key= project['title']):
-            webbrowser.open_new_tab(project['github'])
-    with col2:
-        if project['demourl'] !='empty':
-            if st.button("View App", key= f"app_{project['title']}"):
-                webbrowser.open_new_tab(project['demourl'])
-    with col3:
-        if project['aboutapp'] !='empty':
-            if st.button("Tutorial", key= f"tut_{project['title']}"):
-                webbrowser.open_new_tab(project['aboutapp'])
+    col1.markdown(f"<a href='{project['github']}' target='blank'><img align='center' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ_x8EnB5EvgHYLvjH3i9U4Nm5pUspuUTctQ&usqp=CAU' alt='manishraichodhury' height='80' width='80' /></a>", unsafe_allow_html=True)
+    col1.markdown("Source Code")
+    if project['demourl'] !='empty':
+        col2.markdown(f"<a href='{project['demourl']}' target='blank'><img align='center' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdJHjOEbpuwsY8P5UtraEgCYnMzbUiDSguJg&usqp=CAU' alt='manishraichodhury' height='80' width='80' /></a>", unsafe_allow_html=True)
+        col2.markdown(' View Web App')
+    if project['aboutapp'] !='empty':
+        col3.markdown(f"<a href='{project['aboutapp']}' target='blank'><img align='center' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5vez3aYMw8KL4mQaLurbhem-OOKy9tZKVJA&usqp=CAU' alt='manishraichodhury' height='80' width='80' /></a>", unsafe_allow_html=True)
+        col3.markdown('Video Tutorial')
+    # with col1:
+    #     if st.button("Source Code", key= project['title']):
+    #         webbrowser.open_new_tab(project['github'])
+    # with col2:
+    #     if project['demourl'] !='empty':
+    #         if st.button("View App", key= f"app_{project['title']}"):
+    #             webbrowser.open_new_tab(project['demourl'])
+    # with col3:
+    #     if project['aboutapp'] !='empty':
+    #         if st.button("Tutorial", key= f"tut_{project['title']}"):
+    #             webbrowser.open_new_tab(project['aboutapp'])
 
   
 colored_header(

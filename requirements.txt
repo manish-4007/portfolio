@@ -4,3 +4,4 @@ python-dotenv==1.0.0
 streamlit==1.26.0
 streamlit_card==0.0.61
 streamlit_extras==0.3.2
+

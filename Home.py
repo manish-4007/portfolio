@@ -39,17 +39,15 @@ def my_intro():
         write(write_profession(['Data Scientist', 'AI/ML Engineer','NLP Engineer', 'Data Analyst' ,"Freelancer", 'Python Developer', 'Web Developer',"Django Developer", "Problem Solver"]))
 
 
-def about_myself():
+# def about_myself():
     
-    col1,col2 = st.columns(2)
+#     col1,col2 = st.columns(2)
     with col2:
         cols = st.columns(5)
-        if cols[1].button('Linkedin',use_container_width=True):
-            webbrowser.open_new_tab("https://www.linkedin.com/in/manish-rai-chodhury-170318197/")
-        if cols[2].button('GitHub',use_container_width=True):
-            webbrowser.open_new_tab("https://github.com/manish-4007")
-        if cols[3].button('Kaggle',use_container_width=True):
-            webbrowser.open_new_tab("https://www.kaggle.com/manishraichodhury")
+        cols[1].markdown(f'<br><a href="https://linkedin.com/in/https://www.linkedin.com/in/manish-rai-chodhury-170318197/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/manish-rai-chodhury-170318197/" height="40" width="80" /></a>', unsafe_allow_html=True)
+        cols[2].markdown(f'<br><a href="https://github.com/manish-4007" target="blank"><img align="center" src="https://foundations.projectpythia.org/_images/GitHub-logo.png" alt="manishraichodhury" height="45" width="90" /></a>', unsafe_allow_html=True)
+        cols[3].markdown(f'<br><a href="https://kaggle.com/manishraichodhury" target="blank"><img align="center" src="https://www.kaggle.com/static/images/site-logo.svg" alt="manishraichodhury" height="60" width="80" /></a>', unsafe_allow_html=True)
+        
         st.image('./resources/business-analysis.gif')# Add a download button
         with open("./resources/Resume.pdf", "rb") as file:
             st.download_button(
@@ -231,7 +229,7 @@ def my_skills():
 my_intro()
 
 #! Tell me about yourself
-about_myself()
+# about_myself()
 st.write('---')
 #Featured projects list
 colored_header(

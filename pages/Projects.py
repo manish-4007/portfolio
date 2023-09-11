@@ -1,5 +1,5 @@
 import streamlit as st 
-st.set_page_config(page_title="Digital CV|Manish Rai Chodhury",page_icon="random",layout='wide')
+# st.set_page_config(page_title="Digital CV|Manish Rai Chodhury",page_icon="random",layout='wide')
 import pandas as pd 
 import numpy as np 
 from streamlit_card import card

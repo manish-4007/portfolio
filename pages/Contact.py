@@ -1,4 +1,5 @@
 import streamlit as st
+st.set_page_config(page_title="Digital CV|Manish Rai Chodhury",page_icon="random",layout='wide')
 from send_email import send_email
 import pandas
 

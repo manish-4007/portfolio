@@ -1,11 +1,11 @@
 import streamlit as st 
+st.set_page_config(page_title="Digital CV|Manish Rai Chodhury",page_icon="random",layout='wide')
 import pandas as pd 
 import numpy as np 
 from streamlit_card import card
 from streamlit_extras.colored_header import colored_header
 import webbrowser
 
-st.set_page_config(layout='wide')
 
 about_projects = """### I have keen interest in Data Science, AI, NLP, Machine Learning and Deep Learning and had done on projects with these skills. 
 """
